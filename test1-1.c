@@ -22,20 +22,9 @@ void Listof20();// 20~22년도 추천 리스트
 void Interface(); // MP3 인터페이스
 void Musicstop(); // 음악을 멈추고 메뉴로 돌아가는 함수
 
-/* 음악 실행 함수
+//음악 실행 함수
+//PlaySound(".wav", NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 
-int Stop;
-PlaySound("a.wav", NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
-
-printf("종료를 원하면 0 입력\n");
-scanf("%d", &Stop);
-
-			if (Stop == 0)
-			{
-				PlaySound(NULL, NULL, 0);
-				printf("노래를 종료했습니다.");
-			}
-			*/
 
 int main() {
 	Menu();
@@ -87,19 +76,24 @@ void Agelist() {
 
 void Yearlist() {
 	int a;
-	printf("\t<<년도를 선택해주세요>>\n1.00~04년대\t2.~년대\t3.~년대\t4.~년대\n");
+	printf("\t<<년도를 선택해주세요>>\n1.00~04년대\t2.05~09년대\t3.10~14년대\t4.15~19년대\t5.20~22년대\n");
 	scanf("%d", &a);
 
 	switch (a) {
 	case 1:
+		Listof00();
 		break;
 	case 2:
+		Listof05();
 		break;
 	case 3:
+		Listof10();
 		break;
 	case 4:
+		Listof15();
 		break;
 	case 5:
+		Listof20();
 		break;
 	}
 

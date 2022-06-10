@@ -6,17 +6,17 @@
 
 void Menu(); //메인메뉴 출력 함수
 void Agelist(); // 나이대별 추천 리스트
-void Listof10(); // 10대 추천 리스트
-void Listof20(); // 20대 추천 리스트
-void Listof30(); // 30대 추천 리스트
-void Listof40(); // 40대 추천 리스트
+void Listof10s(); // 10대 추천 리스트
+void Listof20s(); // 20대 추천 리스트
+void Listof30s(); // 30대 추천 리스트
+void Listof40s(); // 40대 추천 리스트
 
 void Yearlist(); // 년도별 추천 리스트
-void Listof00();// 00~04년도 추천 리스트
-void Listof05();// 05~09년도 추천 리스트
-void Listof10();// 10~14년도 추천 리스트
-void Listof15();// 15~19년도 추천 리스트
-void Listof20();// 20~22년도 추천 리스트
+void Listof00_04Y();// 00~04년도 추천 리스트
+void Listof05_09Y();// 05~09년도 추천 리스트
+void Listof10_14Y();// 10~14년도 추천 리스트
+void Listof15_19Y();// 15~19년도 추천 리스트
+void Listof20_22Y();// 20~22년도 추천 리스트
 
 
 void Interface(); // MP3 인터페이스
@@ -60,16 +60,16 @@ void Agelist() {
 
 	switch (a) {
 	case 1: //10대 추천 리스트
-		Listof10();
+		Listof10s();
 		break;
 	case 2: //20대 추천 리스트
-		Listof20();
+		Listof20s();
 		break;
 	case 3://30대 추천 리스트
-		Listof30();
+		Listof30s();
 		break;
 	case 4://40대 추천 리스트
-		Listof40();
+		Listof40s();
 		break;
 	}
 }
@@ -81,19 +81,19 @@ void Yearlist() {
 
 	switch (a) {
 	case 1:
-		Listof00();
+		Listof00_04Y();
 		break;
 	case 2:
-		Listof05();
+		Listof05_09Y();
 		break;
 	case 3:
-		Listof10();
+		Listof10_14Y();
 		break;
 	case 4:
-		Listof15();
+		Listof15_19Y();
 		break;
 	case 5:
-		Listof20();
+		Listof20_22Y();
 		break;
 	}
 
@@ -109,7 +109,7 @@ void Interface() {
 	printf("\t\t                                                                      /                \n");
 }
 
-void Listof10() {
+void Listof10s() {
 	int L10; // 10대 추천음악 번호 입력받는 변수
 	printf("\t<<10대 추천 Music List>>\n\n");
 	printf("1.Beatbox - NCT DREAM\n");
@@ -170,7 +170,7 @@ void Listof10() {
 	}
 }
 
-void Listof20() {
+void Listof20s() {
 	int L20; // 20대 추천음악 번호 입력받는 변수
 	printf("\t<<20대 추천 Music List>>\n\n");
 	printf("1.Yet To Come - 방탄소년단\n");
@@ -231,7 +231,7 @@ void Listof20() {
 	}
 }
 
-void Listof30() {
+void Listof30s() {
 	int L30; // 30대 추천음악 번호 입력받는 변수
 	printf("\t<<30대 추천 Music List>>\n\n");
 	printf("1.Yet To Come - 방탄소년단\n");
@@ -292,7 +292,7 @@ void Listof30() {
 	}
 }
 
-void Listof40() {
+void Listof40s() {
 	int L40; // 40대 추천음악 번호 입력받는 변수
 	printf("\t<<40대 추천 Music List>>\n\n");
 	printf("1.Yet To Come - 방탄소년단\n");
@@ -375,7 +375,7 @@ void Musicstop() {
 	}
 }
 
-void Listof00()  {
+void Listof00_04Y()  {
 	int L00;
 
 	printf("\t<<00~04년대 추천 Music List TOP 5>>\n\n");
@@ -412,7 +412,7 @@ void Listof00()  {
 	}
 }
 
-void Listof05() {
+void Listof05_09Y() {
 	int L05;
 
 	printf("\t<<05~09년대 추천 Music List TOP 5>>\n\n");
@@ -449,7 +449,7 @@ void Listof05() {
 	}
 }
 
-void Listof10() {
+void Listof10_14Y() {
 	int L10;
 	printf("\t<<10~14년대 추천 Music List TOP 5>>\n\n");
 	printf("1. Bad Girl Good Girl - 미쓰에이\n");
@@ -484,7 +484,7 @@ void Listof10() {
 	}
 }
 
-void Listof15() {
+void Listof15_19Y() {
 	int L15;
 
 	printf("\t<<15~19년대 추천 Music List TOP 5>>\n\n");
@@ -521,7 +521,7 @@ void Listof15() {
 	}
 }
 
-void Listof20() {
+void Listof20_22Y() {
 	int L20;
 
 	printf("\t<<20~22년대 추천 Music List TOP 5>>\n\n");

@@ -591,27 +591,27 @@ void Listof20_22Y() {
 		Menu();
 		break;
 	case 1:
-		fputs("\n", fp9);
+		fputs("아무노래 - 지코\n", fp9);
 		PlaySound("아무노래.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 	case 2:
-		fputs("\n", fp9);
+		fputs("METEOR - 창모\n", fp9);
 		PlaySound("METEOR.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 	case 3:
-		fputs("\n", fp9);
+		fputs("아로하 - 조정석\n", fp9);
 		PlaySound("아로하.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 	case 4:
-		fputs("\n", fp9);
+		fputs("흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야 - 장범준\n", fp9);
 		PlaySound("흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 	case 5:
-		fputs("\n", fp9);
+		fputs("Celebrity - 아이유\n", fp9);
 		PlaySound("Celebrity.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;

@@ -43,7 +43,7 @@ void Menu() {
 	Interface();
 
 	switch (rec) {
-	case 0: printf("<<MP3 프로그램을 종료합니다>>\n"); return;
+	case 0: printf("\t\t\t\t\t<<MP3 프로그램을 종료합니다>>\n"); return;
 	case 1: //나이대별 추천인 경우
 		Agelist();
 		break;
@@ -131,7 +131,7 @@ void Interface() {
 
 void Listof10s() {
 	int L10; // 10대 추천음악 번호 입력받는 변수
-	FILE* fp1 = fopen("resentmusic.txt", "a"); // 최근 재생목록을 위한 파일포인터
+	FILE* fp1; // 최근 재생목록을 위한 파일포인터
 
 	printf("\t\t\t\t\t   <<10대 추천 Top 5 Music List>>\n\n\n\n");
 	printf("1.Beatbox - NCT DREAM\n");
@@ -149,37 +149,47 @@ void Listof10s() {
 		Menu();
 		break;
 	case 1:
+		fp1 = fopen("resentmusic.txt", "a");
 		fputs("Beat box - NCT DREAM\n", fp1);
+		fclose(fp1);
 		PlaySound("Beat box.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(1);
 		break;
 	case 2:
+		fp1 = fopen("resentmusic.txt", "a");
 		fputs("낭만교향곡 (Feat. CHANGMO, 박재범) - BIG Naughty (서동현)\n", fp1);
+		fclose(fp1);
 		PlaySound("낭만교향곡.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(1);
 		break;
 	case 3:
+		fp1 = fopen("resentmusic.txt", "a");
 		fputs("나의 X에게 - 경서\n", fp1);
+		fclose(fp1);
 		PlaySound("나의 X에게.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(1);
 		break;
 	case 4:
+		fp1 = fopen("resentmusic.txt", "a");
 		fputs("봄여름가을겨울 - BIGBANG\n", fp1);
+		fclose(fp1);
 		PlaySound("봄여름가을겨울.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(1);
 		break;
 	case 5:
+		fp1 = fopen("resentmusic.txt", "a");
 		fputs("LOVE DIVE - IVE(아이브)\n", fp1);
+		fclose(fp1);
 		PlaySound("LOVE DIVE.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(1);
 		break;
 	}
 
-	fclose(fp1);
 }
 
 void Listof20s() {
-	FILE* fp2 = fopen("resentmusic.txt", "a");
+	FILE* fp2;
+
 	int L20; // 20대 추천음악 번호 입력받는 변수
 	printf("\t\t\t\t\t   <<20대 추천 Top 5 Music List>>\n\n\n\n");
 	printf("1.Yet To Come - 방탄소년단\n");
@@ -197,37 +207,46 @@ printf("\n\n<<메인메뉴로 돌아가려면 0 입력>>\n\n");
 		Menu();
 		break;
 	case 1:
+		fp2 = fopen("resentmusic.txt", "a");
 		fputs("Yet To Come - 방탄소년단\n", fp2);
+		fclose(fp2);
 		PlaySound("Yet To Come.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(2);
 		break;
 	case 2:
+		fp2 = fopen("resentmusic.txt", "a");
 		fputs("Beatbox - NCT DREAM\n", fp2);
+		fclose(fp2);
 		PlaySound("Beat box.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(2);
 		break;
 	case 3:
+		fp2 = fopen("resentmusic.txt", "a");
 		fputs("LOVE DIVE - IVE(아이브)\n", fp2);
+		fclose(fp2);
 		PlaySound("LOVE DIVE.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(2);
 		break;
 	case 4:
+		fp2 = fopen("resentmusic.txt", "a");
 		fputs("봄여름가을겨울 - BIGBANG\n", fp2);
+		fclose(fp2);
 		PlaySound("봄여름가을겨울.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(2);
 		break;
 	case 5:
+		fp2 = fopen("resentmusic.txt", "a");
 		fputs("MY BAG - (여자) 아이들\n", fp2);
+		fclose(fp2);
 		PlaySound("MYBAG.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(2);
 		break;
-
-		fclose(fp2);
 	}
 }
 
 void Listof30s() {
-	FILE* fp3 = fopen("resentmusic.txt", "a");
+	FILE* fp3;
+
 	int L30; // 30대 추천음악 번호 입력받는 변수
 	printf("\t\t\t\t\t   <<30대 추천 Top 5 Music List>>\n\n\n\n");
 	printf("1.Yet To Come - 방탄소년단\n");
@@ -246,36 +265,46 @@ void Listof30s() {
 		Menu();
 		break;
 	case 1:
+		fp3 = fopen("resentmusic.txt", "a");
 		fputs("Yet To Come - 방탄소년단\n", fp3);
+		fclose(fp3);
 		PlaySound("Yet To Come.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(3);
 		break;
 	case 2:
+		fp3 = fopen("resentmusic.txt", "a");
 		fputs("TOMBOY - (여자) 아이들\n", fp3);
+		fclose(fp3);
 		PlaySound("TOMBOY.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(3);
 		break;
 	case 3:
+		fp3 = fopen("resentmusic.txt", "a");
 		fputs("사랑인가 봐 - 멜로망스\n", fp3);
+		fclose(fp3);
 		PlaySound("사랑인가봐.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(3);
 		break;
 	case 4:
+		fp3 = fopen("resentmusic.txt", "a");
 		fputs("어마어마해 - WSG워너비\n", fp3);
+		fclose(fp3);
 		PlaySound("어마어마해.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(3);
 		break;
 	case 5:
+		fp3 = fopen("resentmusic.txt", "a");
 		fputs("취중고백 - 김민석(멜로망스)\n", fp3);
+		fclose(fp3);
 		PlaySound("취중고백.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(3);
 		break;
 	}
-	fclose(fp3);
+
 }
 
 void Listof40s() {
-	FILE* fp4 = fopen("resentmusic.txt", "a");
+	FILE* fp4;
 	int L40; // 40대 추천음악 번호 입력받는 변수
 	printf("\t\t\t\t\t   <<40대 추천 Top 5 Music List>>\n\n\n\n");
 	printf("1.봄여름가을겨울 - BIGBANG (빅뱅)\n");
@@ -293,33 +322,43 @@ void Listof40s() {
 		Menu();
 		break;
 	case 1:
+		fp4 = fopen("resentmusic.txt", "a");
 		fputs("\n", fp4);
+		fclose(fp4);
 		PlaySound("봄여름가을겨울.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(4);
 		break;
 	case 2:
+		fp4 = fopen("resentmusic.txt", "a");
 		fputs("\n", fp4);
-		PlaySound("사랑인가 봐.wav", NULL, SND_FILENAME | SND_ASYNC);
+		fclose(fp4);
+		PlaySound("사랑인가봐.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(4);
 		break;
 	case 3:
+		fp4 = fopen("resentmusic.txt", "a");
 		fputs("\n", fp4);
+		fclose(fp4);
 		PlaySound("LOVE DIVE.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(4);
 		break;
 	case 4:
+		fp4 = fopen("resentmusic.txt", "a");
 		fputs("\n", fp4);
+		fclose(fp4);
 		PlaySound("어마어마해.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(4);
 		break;
 	case 5:
+		fp4 = fopen("resentmusic.txt", "a");
 		fputs("\n", fp4);
+		fclose(fp4);
 		PlaySound("취중고백.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(4);
 		break;
 
 	}
-	fclose(fp4);
+
 }
 
 void Musicoption(int control) {
@@ -374,14 +413,15 @@ void Musicoption(int control) {
 	case 3:
 		PlaySound(NULL, NULL, 0);
 		system("CLS");
-		printf("<<MP3 프로그램을 종료합니다>>\n"); return;
+		printf("\t\t\t\t\t<<MP3 프로그램을 종료합니다>>\n"); return;
 		break;
 	}
 }
 
 void Listof00_04Y() {
 	int L00;
-	FILE* fp5 = fopen("resentmusic.txt", "a");
+	FILE* fp5;
+	
 	printf("\t\t\t\t\t   <<00~04년대 추천 Music List TOP 5>>\n\n\n\n");
 	printf("1. 아시나요 - 조성모\n");
 	printf("2. 다줄거야 - 조규만\n");
@@ -397,38 +437,49 @@ void Listof00_04Y() {
 		Menu();
 		break;
 	case 1:
+		fp5 = fopen("resentmusic.txt", "a");
 		fputs("아시나요 - 조성모\n", fp5);
+		fclose(fp5);
 		PlaySound("아시나요.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(5);
 		break;
 	case 2:
+		fp5 = fopen("resentmusic.txt", "a");
 		fputs("다줄거야 - 조규만\n", fp5);
+		fclose(fp5);
 		PlaySound("다줄거야.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(5);
 		break;
 	case 3:
+		fp5 = fopen("resentmusic.txt", "a");
 		fputs("벌써일년 - 브라운아이즈\n", fp5);
+		fclose(fp5);
 		PlaySound("벌써일년.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(5);
 		break;
 	case 4:
+		fp5 = fopen("resentmusic.txt", "a");
 		fputs("I LOVE YOU - 포지션\n", fp5);
+		fclose(fp5);
 		PlaySound("I LOVE YOU.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(5);
 		break;
 	case 5:
+		fp5 = fopen("resentmusic.txt", "a");
 		fputs("No.1 - 보아\n", fp5);
+		fclose(fp5);
 		PlaySound("No.1.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(5);
 		break;
 
 	}
-	fclose(fp5);
+
 }
 
 void Listof05_09Y() {
 	int L05;
-	FILE* fp6 = fopen("resentmusic.txt", "a");
+	FILE* fp6;
+	
 	printf("\t\t\t\t\t   <<05~09년대 추천 Music List TOP 5>>\n\n\n\n");
 	printf("1. 죄와벌 - sg워너비\n");
 	printf("2. 겁쟁이 - 버즈\n");
@@ -445,37 +496,48 @@ void Listof05_09Y() {
 		Menu();
 		break;
 	case 1:
+		fp6 = fopen("resentmusic.txt", "a");
 		fputs("죄와벌 - sg워너비\n", fp6);
+		fclose(fp6);
 		PlaySound("죄와벌.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(6);
 		break;
 	case 2:
+		fp6 = fopen("resentmusic.txt", "a");
 		fputs("겁쟁이 - 버즈\n", fp6);
+		fclose(fp6);
 		PlaySound("겁쟁이.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(6);
 		break;
 	case 3:
+		fp6 = fopen("resentmusic.txt", "a");
 		fputs("내사람 : partner For Life - sg워너비\n", fp6);
+		fclose(fp6);
 		PlaySound("내사람.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(6);
 		break;
 	case 4:
+		fp6 = fopen("resentmusic.txt", "a");
 		fputs("사랑안해 - 백지영\n", fp6);
+		fclose(fp6);
 		PlaySound("사랑안해.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(6);
 		break;
 	case 5:
+		fp6 = fopen("resentmusic.txt", "a");
 		fputs("미인- 이기찬\n", fp6);
+		fclose(fp6);
 		PlaySound("미인.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(6);
 		break;
 
 	}
-	fclose(fp6);
+
 }
 
 void Listof10_14Y() {
-	FILE* fp7 = fopen("resentmusic.txt", "a");
+	FILE* fp7;
+
 	int L10;
 	printf("\t\t\t\t\t   <<10~14년대 추천 Music List TOP 5>>\n\n\n\n");
 	printf("1. Bad Girl Good Girl - 미쓰에이\n");
@@ -493,38 +555,49 @@ void Listof10_14Y() {
 		Menu();
 		break;
 	case 1:
+		fp7 = fopen("resentmusic.txt", "a");
 		fputs("Bad Girl Good Girl - 미쓰에이\n", fp7);
+		fclose(fp7);
 		PlaySound("Bad Girl Good Girl.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(7);
 		break;
 	case 2:
+		fp7 = fopen("resentmusic.txt", "a");
 		fputs("잔소리 (With 2AM 슬옹) - 아이유\n", fp7);
+		fclose(fp7);
 		PlaySound("잔소리.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(7);
 		break;
 	case 3:
+		fp7 = fopen("resentmusic.txt", "a");
 		fputs("Roly-Poly - 티아라\n", fp7);
+		fclose(fp7);
 		PlaySound("Roly-Poly.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(7);
 		break;
 	case 4:
+		fp7 = fopen("resentmusic.txt", "a");
 		fputs("바람났어 (Feat. 박봄) - gg(박명수&g드래곤)\n", fp7);
+		fclose(fp7);
 		PlaySound("바람났어.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(7);
 		break;
 	case 5:
+		fp7 = fopen("resentmusic.txt", "a");
 		fputs("강남스타일 - 싸이\n", fp7);
+		fclose(fp7);
 		PlaySound("강남스타일.wav", NULL, SND_FILENAME | SND_ASYNC);		
 		Musicoption(7);
 		break;
 
 	}
-	fclose(fp7);
+
 }
 
 void Listof15_19Y() {
 	int L15;
-	FILE* fp8 = fopen("resentmusic.txt", "a");
+	FILE* fp8;
+
 	printf("\t\t\t\t\t   <<15~19년대 추천 Music List TOP 5>>\n\n\n\n");
 	printf("1. 뱅뱅뱅 - 빅뱅 \n");
 	printf("2. 같은 시간 속의 너 - 나얼\n");
@@ -542,38 +615,49 @@ void Listof15_19Y() {
 		Menu();
 		break;
 	case 1:
+		fp8 = fopen("resentmusic.txt", "a");
 		fputs("뱅뱅뱅 - 빅뱅\n", fp8);
+		fclose(fp8);
 		PlaySound("뱅뱅뱅.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(8);
 		break;
 	case 2:
+		fp8 = fopen("resentmusic.txt", "a");
 		fputs("같은 시간 속의 너 - 나얼\n", fp8);
+		fclose(fp8);
 		PlaySound("같은 시간 속의 너.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(8);
 		break;
 	case 3:
+		fp8 = fopen("resentmusic.txt", "a");
 		fputs("cheer up - 트와이스\n", fp8);
+		fclose(fp8);
 		PlaySound("cheer up.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(8);
 		break;
 	case 4:
+		fp8 = fopen("resentmusic.txt", "a");
 		fputs("시간을 달려서 - 여자친구\n", fp8);
+		fclose(fp8);
 		PlaySound("시간을 달려서.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(8);
 		break;
 	case 5:
+		fp8 = fopen("resentmusic.txt", "a");
 		fputs("첫눈처럼 너에게 가겠다 - 에일리\n", fp8);
+		fclose(fp8);
 		PlaySound("첫눈처럼 너에게 가겠다.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(8);
 		break;
 
 	}
-	fclose(fp8);
+
 }
 
 void Listof20_22Y() {
 	int L20;
-	FILE* fp9 = fopen("resentmusic.txt", "a");
+	FILE* fp9;
+
 	printf("\t\t\t\t\t   <<20~22년대 추천 Music List TOP 5>>\n\n\n\n");
 	printf("1. 아무노래 - 지코 \n");
 	printf("2. METEOR - 창모\n");
@@ -591,33 +675,43 @@ void Listof20_22Y() {
 		Menu();
 		break;
 	case 1:
+		fp9 = fopen("resentmusic.txt", "a");
 		fputs("아무노래 - 지코\n", fp9);
+		fclose(fp9);
 		PlaySound("아무노래.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 	case 2:
+		fp9 = fopen("resentmusic.txt", "a");
 		fputs("METEOR - 창모\n", fp9);
+		fclose(fp9);
 		PlaySound("METEOR.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 	case 3:
+		fp9 = fopen("resentmusic.txt", "a");
 		fputs("아로하 - 조정석\n", fp9);
+		fclose(fp9);
 		PlaySound("아로하.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 	case 4:
+		fp9 = fopen("resentmusic.txt", "a");
 		fputs("흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야 - 장범준\n", fp9);
+		fclose(fp9);
 		PlaySound("흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 	case 5:
+		fp9 = fopen("resentmusic.txt", "a");
 		fputs("Celebrity - 아이유\n", fp9);
+		fclose(fp9);
 		PlaySound("Celebrity.wav", NULL, SND_FILENAME | SND_ASYNC);
 		Musicoption(9);
 		break;
 
 	}
-	fclose(fp9);
+
 }
 
 void reclist() {
@@ -628,7 +722,10 @@ void reclist() {
 	FILE* pfp = fopen("resentmusic.txt", "r");
 
 	if (pfp == NULL) {
-		printf("\t\t\t\t\t아직 재생된 파일이 없습니다.\n\n");
+		printf("\t\t\t\t\t아직 재생된 파일이 없습니다.\n\n\t\t\t\t\t  *메인메뉴로 돌아갑니다*\n\n");
+		Sleep(2000);
+		system("CLS");
+		Menu();
 	}
 
 	fread(buffer, sizeof(buffer), 1, pfp);

@@ -413,6 +413,7 @@ void Musicoption(int control) {
 	case 3:
 		PlaySound(NULL, NULL, 0);
 		system("CLS");
+		Interface();
 		printf("\t\t\t\t\t<<MP3 프로그램을 종료합니다>>\n"); return;
 		break;
 	}
@@ -744,6 +745,6 @@ void reclist() {
 	else if (a == 1) {
 		system("CLS");
 		Interface();
-		printf("<<MP3 프로그램을 종료합니다>>\n"); return;
+		printf("\t\t\t\t\t<<MP3 프로그램을 종료합니다>>\n"); return;
 	}
 }
